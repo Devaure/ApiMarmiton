@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   homeReceipe() {
     this.tabReceipe.forEach(element => {
-      this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=2&tags=under_30_minutes&q=${element}`, {
+      this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&tags=under_30_minutes&q=${element}`, {
 
         "headers": {
           "x-rapidapi-host": "tasty.p.rapidapi.com",

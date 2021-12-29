@@ -1,11 +1,19 @@
 .container-nav{
-    margin-left: 30%;
     display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: -3%;
+    /* background-color: #b5e7a0; */
 }
 
 .img-nav{ 
  padding-left: 5vh;   
  float:left ;
+ position: absolute;
+}
+.img-nav:hover {
+    transform: rotate(1080deg);
+    transition: 400ms;
 }
 
 .btn-nav{  
