@@ -1,0 +1,28 @@
+.container-nav{
+    margin-left: 30%;
+}
+
+.img-nav{ 
+ padding-left: 5vh;   
+ float:left ;
+}
+
+.btn-nav{  
+    background:transparent ;
+    border: transparent;
+    margin-left: 10vh; 
+    margin-top: 5vh;
+    margin-bottom: 5.5vh;
+    font-weight: bold; 
+    font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+    font-size: 3.5vh;
+      
+       
+}
+
+.btn-nav:hover { 
+       color: rgba(49, 73, 207, 0.582)  ;
+       font-style:italic ;
+} 
+
+
