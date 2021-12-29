@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   }
 
   onSearch(dataForm:any){
-    this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=10&tags=under_30_minutes&q=${dataForm.keyWord}`,{
+    this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=9&tags=under_30_minutes&q=${dataForm.keyWord}`,{
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
