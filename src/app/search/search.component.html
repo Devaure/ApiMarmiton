@@ -2,14 +2,14 @@
     <form #f="ngForm" (ngSubmit)="onSearch(f.value)">
         <div class="form-group">
             <label for="search">Search</label>
-            <input type="text" name="keyWord" id="search" ngModel required>
+            <input type="text" name="keyWord" id="search" placeholder="Search receipe ..." ngModel required>
             <button type="submit" class="btn-search"><img src="../../assets/images/icons8-search.gif" alt="icon loupe image" width="30px"></button>
         </div>
     </form>
 </div>
 <div class="container-card">
     <div class="card" *ngFor="let p of pageRecettes?.results">
-        <h2>{{p.name}}</h2>
         <img src="{{p.thumbnail_url}}" alt="{{p.name}}">
+        <h2>{{p.name}}</h2>
     </div>
 </div>
