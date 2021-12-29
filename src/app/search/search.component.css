@@ -12,7 +12,7 @@
     flex-direction: row;
 }
 #search {
-    width: 100%;
+    width: 60%;
     padding: 12px 200px;
     background-color: transparent;
     transition: transform 250ms ease-in-out;
@@ -20,8 +20,8 @@
     line-height: 18px;   
     color: #575756;
     border-radius: 50px;
-
 }
+
 /* ---------------------------------------------CARD RECEIPE SEARCH------------------------------------------------- */
 .container-card {
     display: flex;

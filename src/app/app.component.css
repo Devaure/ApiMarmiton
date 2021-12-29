@@ -1,5 +1,6 @@
 .container-nav{
     margin-left: 30%;
+    display: flex;
 }
 
 .img-nav{ 
