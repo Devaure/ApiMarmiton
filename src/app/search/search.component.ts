@@ -20,7 +20,7 @@ export class SearchComponent implements OnInit {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "cbe0ce5543msh02f357e73f1d277p1ec0cbjsnff71e7b7277e"
+        "x-rapidapi-key": "f0851399c0mshb7356be765dcad0p17ee0ejsn062bb89a017b"
       }
     }).subscribe(response => {
       console.log(response);
