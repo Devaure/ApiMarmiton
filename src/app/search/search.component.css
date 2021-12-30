@@ -44,9 +44,10 @@
     box-shadow: lightgray 4px 4px 20px;
     border-radius: 10px;
     border: 2px solid #52A9A4;
+    transition: 0.4s;
 }
 .card:hover {
-    transform: translateX(10px) translateY(10px)
+    transform: scale(1.1);
 }
 
 .card h2 {
@@ -61,8 +62,9 @@
 }
 
 .imgSearch img{
-    width: 100%;
-    height: auto;
+    width: 375px;
+    height: 400px;
     text-align: center;
     border-radius: 10px;
+    object-fit: cover;
 }
