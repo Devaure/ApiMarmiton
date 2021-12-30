@@ -1,0 +1,42 @@
+h2{ 
+    border-radius: 15px;
+    width: fit-content ;
+    background-color: #52A9A4;
+    color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container-receipe{ 
+    align-content: space-around;
+    width: 80%; 
+    height: fit-content;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+} 
+.card{
+    float:left;
+}
+.card img{
+    border-radius: 10px;
+    border: solid 2px black;
+    margin-left: 2%;
+    margin-top: 0.5%; 
+
+}
+.food{
+    
+    padding-left: 55%;
+} 
+
+.step{  
+    text-align: center;
+    padding-top:20%;
+    height: fit-content;    
+} 
+
