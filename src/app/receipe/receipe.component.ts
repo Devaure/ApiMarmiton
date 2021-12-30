@@ -23,10 +23,11 @@ export class ReceipeComponent implements OnInit {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "185b30adefmsh5370c1fe38b7058p19a5a6jsn6778c64e8009"
+        "x-rapidapi-key": "711b86254cmsh3ddaabf1a375146p12b4a3jsnb183386ea0c5"
       }
     }).subscribe(response => {
-     this.recetteInformation = response;
+      this.recetteInformation = response;
+      console.log(this.recetteInformation?.results[0].original_video_url);
     });
   }
 

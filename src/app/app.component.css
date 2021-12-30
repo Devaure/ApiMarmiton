@@ -1,37 +1,3 @@
-.container-nav{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: #52a9a557;
-    border-radius: 30px;
-}
 
-.img-nav{ 
- padding-left: 5vh;   
- float:left ;
- position: absolute;
-}
-.img-nav:hover {
-    transform: rotate(1080deg);
-    transition: 400ms;
-}
-
-.btn-nav{  
-    background:transparent ;
-    border: transparent;
-    width: 25%;
-    margin-top: 5vh;
-    margin-bottom: 5.5vh;
-    font-weight: bold; 
-    font-family: 'Times New Roman', Times, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
-    font-size: 3.5vh;
-      
-       
-}
-
-.btn-nav:hover { 
-       color: rgba(49, 73, 207, 0.582)  ;
-       font-style:italic ;
-} 
 
 
