@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
 
         "headers": {
           "x-rapidapi-host": "tasty.p.rapidapi.com",
-          "x-rapidapi-key": "f0851399c0mshb7356be765dcad0p17ee0ejsn062bb89a017b"
+          "x-rapidapi-key": "185b30adefmsh5370c1fe38b7058p19a5a6jsn6778c64e8009"
         }
       }).subscribe(response => {
         this.pageHome = response;

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -12,7 +11,7 @@ export class SearchComponent implements OnInit {
  @Output() searchEventEmitter: EventEmitter<any> = new EventEmitter();
 
   pageRecettes:any;
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient, private router:Router) { 
   }
 
   ngOnInit(): void {
@@ -24,7 +23,7 @@ export class SearchComponent implements OnInit {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "f0851399c0mshb7356be765dcad0p17ee0ejsn062bb89a017b"
+        "x-rapidapi-key": "185b30adefmsh5370c1fe38b7058p19a5a6jsn6778c64e8009"
       }
     }).subscribe(response => {
      this.pageRecettes = response;
@@ -33,5 +32,6 @@ export class SearchComponent implements OnInit {
   
   onValue(data:any){
      this.searchEventEmitter.emit(data);
+      this.router.navigateByUrl(`/receipe/${data.name}`);
   }
 }
