@@ -1,8 +1,8 @@
+<h2>{{recetteInformation?.results[0].name | uppercase}}</h2>
 
 <div class="container-receipe">
-    <h2>{{recetteInformation?.results[0].name}}</h2>
     <div class="card">
-        <img src="{{recetteInformation?.results[0].thumbnail_url}}">
+        <img src="{{recetteInformation?.results[0].thumbnail_url}}" width="150px" height="150px">
     </div>
     <div class="food">
         <h3>Ingredients</h3>
@@ -10,11 +10,13 @@
            
                <span>{{ing.measurements[0].quantity}} </span><span> {{ing.measurements[0].unit.name}}</span> <span> {{ing.ingredient.name}}</span>
            
-        </div>
-        
+        </div>   
     </div>
+    
+    <div class="step">
     <h3>Instructions for your receipe</h3>
-    <div class="step"  *ngFor="let instruct of recetteInformation?.results[0].instructions">
+    <div *ngFor="let instruct of recetteInformation?.results[0].instructions">
         <p>{{instruct.display_text}}</p>
+    </div> 
     </div>
 </div>
