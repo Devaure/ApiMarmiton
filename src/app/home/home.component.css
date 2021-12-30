@@ -13,7 +13,9 @@
     box-shadow: rgba(61, 61, 61, 0.219) 4px 4px 20px;
     border-radius: 10px;
     border: 2px solid #52A9A4;
-
+}
+.card:hover {
+    transform: translateX(10px) translateY(10px)
 }
 .imgHome {
     width: 100%;
