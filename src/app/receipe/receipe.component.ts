@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './receipe.component.html',
   styleUrls: ['./receipe.component.css']
 })
-export class ReceipeComponent implements OnInit {
-
+export class ReceipeComponent implements OnInit  {
+receipeInformation:any;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onActionEvent($event:any){
+   this.receipeInformation = $event;
+
+  }
 }

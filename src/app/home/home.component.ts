@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
           "x-rapidapi-key": "f0851399c0mshb7356be765dcad0p17ee0ejsn062bb89a017b"
         }
       }).subscribe(response => {
-        console.log(response);
         this.pageHome = response;
       });
     });

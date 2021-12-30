@@ -1,1 +1,7 @@
-<p>receipe works!</p>
+<app-search (searchEventEmitter)="onActionEvent($event)"></app-search>
+
+<div class="container-receipe">
+    <div>
+        <img src="{{receipeInformation?.thumbnail_url}}">
+    </div>
+</div>
