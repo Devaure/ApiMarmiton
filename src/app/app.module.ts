@@ -8,13 +8,15 @@ import { ReceipeComponent } from './receipe/receipe.component';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ReceipeComponent,
-    SearchComponent
+    SearchComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,4 +19,10 @@
         <p>{{instruct.display_text}}</p>
     </div> 
     </div>
+
+    <div class="video">
+        <video controls width="650" preload="auto" [src]="recetteInformation?.results[0].original_video_url" >
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+    </div>
 </div>

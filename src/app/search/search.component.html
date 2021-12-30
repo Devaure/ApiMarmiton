@@ -11,7 +11,9 @@
 </div>
 <div class="container-card">
     <div class="card" *ngFor="let p of pageRecettes?.results">
-        <img  src="{{p.thumbnail_url}}" alt="{{p.name}}" (click)="onValue(p)">
+        <div class="imgSearch">
+            <img  src="{{p.thumbnail_url}}" alt="{{p.name}}" (click)="onValue(p)">
+        </div>
         <h2>{{p.name}}</h2>
         
     </div>

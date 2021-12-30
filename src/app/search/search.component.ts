@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
- @Output() searchEventEmitter: EventEmitter<any> = new EventEmitter();
-
   pageRecettes:any;
   constructor(private http:HttpClient, private router:Router) { 
   }
@@ -23,7 +21,7 @@ export class SearchComponent implements OnInit {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "185b30adefmsh5370c1fe38b7058p19a5a6jsn6778c64e8009"
+        "x-rapidapi-key": "711b86254cmsh3ddaabf1a375146p12b4a3jsnb183386ea0c5"
       }
     }).subscribe(response => {
      this.pageRecettes = response;
@@ -31,7 +29,6 @@ export class SearchComponent implements OnInit {
   }
   
   onValue(data:any){
-     this.searchEventEmitter.emit(data);
       this.router.navigateByUrl(`/receipe/${data.name}`);
   }
 }
