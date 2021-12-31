@@ -1,18 +1,17 @@
 <h2>{{recetteInformation?.results[0].name | uppercase}}</h2>
 
 <div class="container-receipe">
+    <div class="img-ingredient">
     <div class="card">
         <img src="{{recetteInformation?.results[0].thumbnail_url}}">
     </div>
     <div class="food">
         <h3>Ingredients</h3>
-        <div class="ingredients" *ngFor="let ing of recetteInformation?.results[0].sections[0].components">
-           
-               <span>{{ing.measurements[0].quantity}} </span><span> {{ing.measurements[0].unit.name}}</span> <span> {{ing.ingredient.name}}</span>
-           
+        <div class="ingredients" *ngFor="let ing of recetteInformation?.results[0].sections[0].components">     
+               <span> - {{ing.measurements[0].quantity}} </span><span> {{ing.measurements[0].unit.name}}</span> <span> {{ing.ingredient.name}}</span>
         </div>   
     </div>
-    
+    </div>
     <div class="step">
     <h3>Instructions for your receipe</h3>
     <div *ngFor="let instruct of recetteInformation?.results[0].instructions">
@@ -21,7 +20,7 @@
     </div>
 
     <div class="video">
-        <video controls width="650" preload="auto" [src]="recetteInformation?.results[0].original_video_url" >
+        <video controls preload="auto" [src]="recetteInformation?.results[0].original_video_url" >
             Sorry, your browser doesn't support embedded videos.
         </video>
     </div>
