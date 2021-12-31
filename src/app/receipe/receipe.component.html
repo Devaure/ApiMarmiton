@@ -19,7 +19,7 @@
     </div> 
     </div>
 
-    <div class="video">
+    <div class="video" *ngIf="recetteInformation?.results[0].original_video_url">
         <video controls preload="auto" [src]="recetteInformation?.results[0].original_video_url" >
             Sorry, your browser doesn't support embedded videos.
         </video>
