@@ -37,3 +37,12 @@
     width: 60%;
     border-top: 2px solid #52A9A4;
 }
+
+@media screen and (max-width: 650px){
+    .img-nav {
+        display: none;
+    } 
+    .btn-nav{
+        font-size: 25px;
+    }
+ }

@@ -31,3 +31,15 @@
     border-radius: 10px;
     object-fit: cover;
 }
+
+@media screen and (max-width: 500px) {
+    .card {
+        width: 90%;
+    }
+    .imgHome img {
+        width: 100%;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
