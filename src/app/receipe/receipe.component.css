@@ -16,6 +16,11 @@ h3 {
 }
 div {
     font-size: 20px;
+    overflow: auto;
+}
+span {
+    line-height: 40px;
+
 }
 .container-receipe{ 
     align-content: space-around;
@@ -66,7 +71,9 @@ video {
     display: block;
     margin: 0 auto 2% auto;
 }
-
+.PreparationTime {
+    font-weight: bold;
+}
 @media screen and (max-width: 900px) {
     .img-ingredient{
         flex-direction: column;

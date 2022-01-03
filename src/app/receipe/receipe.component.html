@@ -15,7 +15,7 @@
     </div>
     <div class="step">
     <h3>Instructions for your receipe</h3>
-    <p class="PrparationTime" *ngIf="recetteInformation?.results[0].prep_time_minutes">Preparation Time: {{recetteInformation?.results[0].prep_time_minutes}} min</p>
+    <p *ngIf="recetteInformation?.results[0].prep_time_minutes"><span class="PreparationTime">Preparation Time:</span> {{recetteInformation?.results[0].prep_time_minutes}} min</p>
     <div *ngFor="let instruct of recetteInformation?.results[0].instructions">
         <p>{{instruct.display_text}}</p>
     </div> 
