@@ -8,7 +8,7 @@
     <div class="food">
         <h3>Ingredients</h3>
         <div class="ingredients" *ngFor="let ing of recetteInformation?.results[0].sections[0].components">     
-               <span> - {{ing.measurements[0].quantity}} </span><span> {{ing.measurements[0].unit.name}}</span> <span> {{ing.ingredient.name}}</span>
+              <span> - </span><span *ngIf="ing.measurements[0].quantity != 0">{{ing.measurements[0].quantity}} </span><span> {{ing.measurements[0].unit.name}}</span> <span> {{ing.ingredient.name}}</span>
         </div>   
     </div>
     </div>

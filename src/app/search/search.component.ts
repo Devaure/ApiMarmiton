@@ -21,7 +21,7 @@ export class SearchComponent implements OnInit {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "711b86254cmsh3ddaabf1a375146p12b4a3jsnb183386ea0c5"
+        "x-rapidapi-key": "f52b8100d9msh384ea83972f2e27p12cb33jsn9528d63c23ed"
       }
     }).subscribe(response => {
      this.pageRecettes = response;
