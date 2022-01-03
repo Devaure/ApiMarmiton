@@ -25,7 +25,7 @@ export class ApiServiceService {
 
         "headers": {
           "x-rapidapi-host": "tasty.p.rapidapi.com",
-          "x-rapidapi-key": "8b62751475msh7d3f03afa7ad76bp1ca87fjsn06dc0ba15a02"
+          "x-rapidapi-key": "b1158bc221msh32c40bad20c18b7p11d611jsn306b409375cc"
         }
       }).subscribe(response => {
          this.tabReceipeTwo.push(response);
@@ -40,7 +40,7 @@ export class ApiServiceService {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "8b62751475msh7d3f03afa7ad76bp1ca87fjsn06dc0ba15a02"
+        "x-rapidapi-key": "b1158bc221msh32c40bad20c18b7p11d611jsn306b409375cc"
       }
     })
   }
@@ -51,7 +51,7 @@ export class ApiServiceService {
     
       "headers": {
         "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "8b62751475msh7d3f03afa7ad76bp1ca87fjsn06dc0ba15a02"
+        "x-rapidapi-key": "b1158bc221msh32c40bad20c18b7p11d611jsn306b409375cc"
       }
     });
   }
