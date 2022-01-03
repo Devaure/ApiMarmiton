@@ -1,4 +1,5 @@
-<h2>{{recetteInformation?.results[0].name | uppercase}}</h2>
+<div class="" *ngIf="recetteInformation">
+   <h2>{{recetteInformation?.results[0].name | uppercase}}</h2>
 
 <div class="container-receipe">
     <div class="img-ingredient">
@@ -14,6 +15,7 @@
     </div>
     <div class="step">
     <h3>Instructions for your receipe</h3>
+    <p class="PrparationTime" *ngIf="recetteInformation?.results[0].prep_time_minutes">Preparation Time: {{recetteInformation?.results[0].prep_time_minutes}} min</p>
     <div *ngFor="let instruct of recetteInformation?.results[0].instructions">
         <p>{{instruct.display_text}}</p>
     </div> 
@@ -24,4 +26,5 @@
             Sorry, your browser doesn't support embedded videos.
         </video>
     </div>
+</div> 
 </div>

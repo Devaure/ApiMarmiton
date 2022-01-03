@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ApiServiceService } from '../services/api-service.service';
+
+@Injectable({
+  providedIn:'root'
+})
 
 @Component({
   selector: 'app-home',
@@ -10,34 +15,19 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit {
   pageHome: any;
-  tabReceipe: string[] = [
-    "chicken",
-    "salade",
-    "apple pie",
-    "cake"
-  ];
-  constructor(private http: HttpClient, private router:Router) { }
+
+ 
+  constructor(private http: HttpClient, private router:Router, private serviceApi:ApiServiceService) {
+    
+   }
 
   ngOnInit(): void {
-    this.homeReceipe();
-  }
-
-  homeReceipe() {
-    this.tabReceipe.forEach(element => {
-      this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&tags=under_30_minutes&q=${element}`, {
-
-        "headers": {
-          "x-rapidapi-host": "tasty.p.rapidapi.com",
-          "x-rapidapi-key": "f52b8100d9msh384ea83972f2e27p12cb33jsn9528d63c23ed"
-        }
-      }).subscribe(response => {
-        this.pageHome = response;
-      });
-    });
-
+    this.pageHome = this.serviceApi.homeReceipe();
+    console.log(this.pageHome);
   }
 
   onValueHome(data:any){
+    console.log(data.name);
     this.router.navigateByUrl(`/receipe/${data.name}`);
 }
 }

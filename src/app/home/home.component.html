@@ -1,5 +1,5 @@
 <div class="container-home">
-    <div class="card" *ngFor="let p of pageHome?.results">
+    <div class="card" *ngFor="let p of pageHome[0]?.results">
         <div class="imgHome">
             <img src="{{p.thumbnail_url}}" alt="{{p.name}}" (click)="onValueHome(p)">
         </div>

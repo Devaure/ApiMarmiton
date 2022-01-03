@@ -1,6 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiServiceService } from '../services/api-service.service';
+
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -8,27 +13,23 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  pageRecettes:any;
-  constructor(private http:HttpClient, private router:Router) { 
+  pageRecettes: any;
+  searchResult: any;
+  constructor(private http: HttpClient, private router: Router, private apiService: ApiServiceService) {
   }
 
   ngOnInit(): void {
+
   }
 
-  onSearch(dataForm:any){
-    
-    this.http.get(`https://tasty.p.rapidapi.com/recipes/list?from=0&size=9&tags=under_30_minutes&q=${dataForm.keyWord}`,{
-    
-      "headers": {
-        "x-rapidapi-host": "tasty.p.rapidapi.com",
-        "x-rapidapi-key": "f52b8100d9msh384ea83972f2e27p12cb33jsn9528d63c23ed"
-      }
-    }).subscribe(response => {
-     this.pageRecettes = response;
+  onSearch(dataForm: any) {
+    this.apiService.onSearch(dataForm.keyWord).subscribe((response: any) => {
+      this.searchResult = response.results;
     });
+
   }
-  
-  onValue(data:any){
-      this.router.navigateByUrl(`/receipe/${data.name}`);
+
+  onValue(data: any) {
+    this.router.navigateByUrl(`/receipe/${data.name}`);
   }
 }

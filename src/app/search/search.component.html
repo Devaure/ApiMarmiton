@@ -10,11 +10,13 @@
     </form>
 </div>
 <div class="container-card">
-    <div class="card" *ngFor="let p of pageRecettes?.results">
+    <div class="card" *ngFor="let p of searchResult">
+
         <div class="imgSearch">
-            <img  src="{{p.thumbnail_url}}" alt="{{p.name}}" (click)="onValue(p)">
+            <img src="{{p.thumbnail_url}}" alt="{{p.name}}" (click)="onValue(p)">
+            <h2>{{p.name}}</h2>
         </div>
-        <h2>{{p.name}}</h2>
-        
+
+
     </div>
 </div>
