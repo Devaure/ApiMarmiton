@@ -27,7 +27,14 @@
     border-radius: 50px;
     margin: 5% auto;
 }
-
+@media screen and (max-width: 900px) {
+    #search {
+        width: 100%;
+        align-items: center;
+        min-width: none;
+        padding: 12px 50%; 
+    }
+}
 /* ---------------------------------------------CARD RECEIPE SEARCH------------------------------------------------- */
 .container-card {
     display: flex;

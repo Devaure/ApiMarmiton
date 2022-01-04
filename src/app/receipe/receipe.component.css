@@ -44,15 +44,15 @@ span {
     height: auto;
     border-radius: 10px;
     border: solid 2px #52A9A4;
-    margin: 4% 2% 2% 4%;
+    margin: 4% 2% 0% 4%;
 
 }
 .food {
-    width: 50%;
+    width: 43%;
     height: auto;
     border: solid 2px #52A9A4;
     border-radius: 10px;
-    margin: 2% 2% 1% 2%;
+    margin: 2% 2% 0% 2%;
     padding: 0 0 2% 5%;
 }
 
@@ -74,7 +74,7 @@ video {
 .PreparationTime {
     font-weight: bold;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
     .img-ingredient{
         flex-direction: column;
     }
@@ -87,7 +87,12 @@ video {
     h2 {
         font-size: 25px;
     }
+    .card img{
+        width: 95%;
+        margin: 2% 2% 2% 2%;
+    }
 }
+
 
 @media screen and (max-width: 670px) {
     video{
